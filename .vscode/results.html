@@ -10,13 +10,13 @@
 <body>
   <main class="container-fluid">
     <div class="row min-vh-100 align-content-stretch">
-      <form class="form col-sm col-lg-3 bg-light p-4" id="search-form">
+      <form class="form col-sm col-lg-3 bg-light p-4">
         <h2 class="text-center mb-4">Library of Congress Search</h2>
         <div class="mb-3">
-          <input type="text" class="form-control" id="search-field" placeholder="Search..." required>
+          <input type="text" class="form-control" id="search-field" placeholder="Search...">
         </div>
         <div class="mb-3">
-          <select class="form-select container-fluid" id="format-input" aria-label="">
+          <select class="form-select container-fluid" id="format-input" aria-label="" required>
             <option selected disabled value="">Select a format...</option>
             <option value="Maps">Maps</option>
             <option value="Audio">Audio</option>
@@ -32,8 +32,8 @@
           <button type="button" class="btn btn-primary container-fluid" id="search-button">Click to Search</button>
         </div>
       </form>
-      <div class="d-flex flex-column col-sm col-lg-9 bg-dark min-vh-100">
-        <h2 class="text-light mt-4 ms-4">Results for <span id="search-query"></span></h2>
+      <div class="d-flex col-sm col-lg-9 bg-dark min-vh-100">
+        <h2 class="text-light my-4">Results for</h2>
         <div id="results-container"></div>
       </div>
     </div>
