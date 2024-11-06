@@ -1,11 +1,10 @@
 let searchButton = document.getElementById('search-button');
 let searchForm = document.getElementById('search-form');
-let searchField = document.getElementById('search-field');
 
 function handleSearchSubmit(event) {
   event.preventDefault();
   
-  let searchInput = document.getElementById('search-field').value.trim();
+  let searchInput = document.getElementById('search-field').value;
   let searchFormat = document.getElementById('format-input').value;
 
   if(!searchForm.checkValidity())
@@ -20,11 +19,3 @@ function handleSearchSubmit(event) {
 }
 
 searchButton.addEventListener('click', handleSearchSubmit);
-searchField.addEventListener('keypress', function(event) {
-
-  if(event.key == "Enter")
-  {
-    event.preventDefault();
-    searchButton.click();
-  }
-});
